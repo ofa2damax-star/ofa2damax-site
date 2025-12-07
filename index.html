@@ -1,4 +1,4 @@
-<!-- HEADER BAR --><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -15,23 +15,26 @@
     line-height: 1.45;
   }
 
-  /* FULL-WIDTH HEADER: LOGO LEFT / NEKO RIGHT TOUCH IN MIDDLE */
+  /* HEADER: 2x3 IMAGES WITH INFINITY IN CENTER */
   .header-bar {
     width: 100%;
-    height: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
   }
 
-  .header-bar img {
-    width: 100%;
-    height: 50%;
+  .header-img {
+    width: 160px;
+    height: 240px;
     object-fit: cover;
-    display: block;
-    margin: 0;
-    padding: 0;
+    border-radius: 10px;
+  }
+
+  .infinity {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 0 10px;
   }
 
   .container {
@@ -54,10 +57,18 @@
 
 <body>
 
-<!-- HEADER BAR -->
+<!-- HEADER BAR WITH INFINITY IN THE MIDDLE -->
 <div class="header-bar">
-  <img src="ofa.png" alt="Ofa2DaMax Logo">
-  <img src="65D4C14F-6DC7-4C0B-8C73-800AAAD84CF4.jpeg" alt="Neko">
+
+  <!-- LEFT: LOGO -->
+  <img src="ofa.png" alt="Ofa2DaMax Logo" class="header-img">
+
+  <!-- CENTER: INFINITY SYMBOL -->
+  <div class="infinity">∞</div>
+
+  <!-- RIGHT: NEKO -->
+  <img src="65D4C14F-6DC7-4C0B-8C73-800AAAD84CF4.jpeg" alt="Neko" class="header-img">
+
 </div>
 
 <div class="container">
@@ -98,15 +109,14 @@
 
 <p>
   Our mission is to lift children and families with unwavering support,
-  empowerment, and unconditional love. We provide essentials,
-  opportunities, and hope so every child feels seen, valued, and capable
-  of reaching their full potential.
+  empowerment, and unconditional love. We provide essentials, opportunities,
+  and hope so every child feels seen, valued, and capable of reaching their
+  full potential.
 </p>
 
 <p>
   We do this through direct support, school and community partnerships,
-  and sustainable projects that turn apparel and gear into funding for
-  kids.
+  and sustainable projects that turn apparel and gear into funding for kids.
 </p>
 
 <!-- HOW WE WORK -->
@@ -163,34 +173,24 @@
 
 <div class="photo-flow" style="width:100%; max-width:850px; margin:auto; text-align:center;">
 
-    <!-- PHOTO 1 -->
     <img src="IMG_2642.jpeg" style="width:100%; border-radius:10px; margin-bottom:15px;">
-
-    <!-- MESSAGE 1 -->
     <p style="margin:18px 0; font-size:17px; font-weight:bold;">
         Neko is the feeling<br>
         we become when we give love away.
     </p>
 
-    <!-- PHOTO 2 -->
     <img src="IMG_3703.jpeg" style="width:100%; border-radius:10px; margin:20px 0;">
-
-    <!-- MESSAGE 2 -->
     <p style="margin:18px 0; font-size:17px; font-weight:bold;">
         Every time we lift someone,<br>
         that’s Neko living through us.
     </p>
 
-    <!-- PHOTO 3 -->
     <img src="IMG_8133.jpeg" style="width:100%; border-radius:10px; margin:20px 0;">
-
-    <!-- MESSAGE 3 -->
     <p style="margin:18px 0; font-size:17px; font-weight:bold;">
         The love we give is how<br>
         he shows he’s still here.
     </p>
 
-    <!-- PHOTO 4 -->
     <img src="IMG_9782.jpeg" style="width:100%; border-radius:10px; margin-top:20px;">
 
 </div>
