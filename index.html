@@ -1,238 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Ofa2DaMax · Love 2 Da Max</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    color: #222;
-    margin: 0;
-    padding: 0;
-    line-height: 1.35;
-  }
-
-  /* TIGHT HEADER: LOGO LEFT + NEKO RIGHT */
-  .header-bar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6px 14px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .header-bar img.logo {
-    width: 90px;       /* smaller, tight */
-    height: auto;
-  }
-
-  .header-bar img.neko {
-    width: 90px;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-
-  .container {
-    width: 90%;
-    max-width: 800px;
-    margin: 8px auto 28px;
-  }
-
-  h1, h2, h3 {
-    font-weight: bold;
-    margin: 6px 0 4px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  h2 {
-    font-size: 16px;
-  }
-
-  h3 {
-    font-size: 14px;
-  }
-
-  p {
-    margin: 4px 0;
-    font-size: 14px;
-  }
-
-  ul {
-    margin: 4px 0 8px 20px;
-    padding: 0;
-    font-size: 14px;
-  }
-
-  li {
-    margin: 2px 0;
-  }
-
-  .center {
-    text-align: center;
-  }
-
-  .muted {
-    color: #666;
-  }
-
-  .photo-strip {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 8px;
-    margin-top: 14px;
-  }
-
-  .photo-strip img {
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-
-  hr {
-    margin: 16px 0;
-    border: 0;
-    border-top: 1px solid #ddd;
-  }
-</style>
-</head>
-
-<body>
-
-<!-- TIGHT HEADER BAR -->
+<!-- HEADER BAR -->
 <div class="header-bar">
   <img src="ofa.png" class="logo" alt="Ofa2DaMax Logo">
   <img src="65D4C14F-6DC7-4C0B-8C73-800AAAD84CF4.jpeg" class="neko" alt="Neko">
 </div>
 
-<div class="container">
+<style>
+/* FULL-WIDTH HEADER: TWO IMAGES TOUCHING IN THE CENTER */
+.header-bar {
+  width: 100%;
+  height: 180px;             /* adjust if you want taller/shorter */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 0;
+}
 
-  <!-- TITLE / TAGLINE -->
-  <h1 class="center">OFA2DAMAX ∞</h1>
-  <h2 class="center">N &amp; N · In honor of Neko · Love 2 Da Max</h2>
+/* LEFT IMAGE — stretches to middle */
+.header-bar img.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
 
-  <!-- CONTACT QUICK -->
-  <div class="center">
-    <p><strong>TOLL-FREE:</strong> 1-844-568-2629 · <strong>LOCAL:</strong> 385-202-1110 · <strong>CELL (JASON):</strong> 801-529-8857</p>
-    <p><strong>EMAIL:</strong> ofa2damax@gmail.com</p>
-  </div>
+/* RIGHT IMAGE — stretches to middle */
+.header-bar img.neko {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
 
-  <p class="center muted">
-    Lifting kids &amp; families with love 2 da max.<br>
-    Nonprofit · Utah · Kids &amp; Families · In honor of Neko
-  </p>
-
-  <hr>
-
-  <!-- LEGACY SECTION -->
-  <h3 class="center">∞ N &amp; N · Legacy of love</h3>
-
-  <p>
-    Ofa2DaMax is a youth-focused nonprofit created in memory of <strong>Neko</strong>, dedicated to
-    making sure no child gets held back by what they don’t have. Clothing, gear, school needs,
-    basics—whatever it is, the mission is simple: <strong>nobody gets left behind on love.</strong>
-  </p>
-
-  <p>
-    Every act of support, every kid who feels seen, and every bit of love shared in his honor is part
-    of Neko’s story living on.
-  </p>
-
-  <hr>
-
-  <!-- MISSION -->
-  <h2>Our mission</h2>
-
-  <p>
-    Our mission is to lift children and families with unwavering support, empowerment, and
-    unconditional love. We provide essentials, opportunities, and hope so every child feels
-    seen, valued, and capable of reaching their full potential.
-  </p>
-
-  <p>
-    We do this through direct support, school and community partnerships, and sustainable projects
-    that turn apparel and gear into funding for kids.
-  </p>
-
-  <hr>
-
-  <!-- HOW WE WORK -->
-  <h2>How we work</h2>
-
-  <h3>01 · Direct support</h3>
-  <ul>
-    <li>Essentials for kids &amp; families.</li>
-    <li>Clothing, shoes, school items, hygiene, and basics.</li>
-    <li>Fast response when families are in crisis.</li>
-    <li>Dignity-first: no shame, no labels.</li>
-  </ul>
-
-  <h3>02 · Community</h3>
-  <ul>
-    <li>School &amp; youth partnerships.</li>
-    <li>Referrals from schools, counselors, and coaches.</li>
-    <li>Keeping kids connected to school, sports, and peers.</li>
-    <li>Focus on kids who feel unseen or last in line.</li>
-  </ul>
-
-  <h3>03 · Sustainability</h3>
-  <ul>
-    <li>Gear with purpose.</li>
-    <li>Embroidery &amp; apparel projects with school emblems.</li>
-    <li>Proceeds help fund essentials for kids.</li>
-    <li>Community pride that gives back.</li>
-  </ul>
-
-  <hr>
-
-  <!-- CONTACT & SUPPORT DETAIL -->
-  <h2>Contact &amp; support</h2>
-
-  <p>If you need help for a child or family, want to partner as a school or program, or are interested in donating or sponsoring, reach out directly.</p>
-
-  <p><strong>Phone</strong><br>
-    Toll-free: 1-844-568-2629<br>
-    Local: 385-202-1110<br>
-    Cell (Jason): 801-529-8857
-  </p>
-
-  <p><strong>Email</strong><br>
-    General: info@ofa2damax.com<br>
-    Gmail: ofa2damax@gmail.com<br>
-    Jason: jason@ofa2damax.com
-  </p>
-
-  <p><strong>Location</strong><br>
-    Utah, United States · Serving kids &amp; families in our community and beyond.
-  </p>
-
-  <hr>
-
-  <!-- PHOTOS -->
-  <h2 class="center">Our work · Our people · Our story</h2>
-
-  <div class="photo-strip">
-    <img src="IMG_2642.jpeg" alt="">
-    <img src="IMG_3703.jpeg" alt="">
-    <img src="IMG_8133.jpeg" alt="">
-    <img src="IMG_9782.jpeg" alt="">
-  </div>
-
-  <hr>
-
-  <p class="center muted">
-    For sponsor sheets, banks, or foundations, this page can be printed as a one-pager over
-
-  <p class="center">
-    © 2025 Ofa2DaMax · In memory of Neko · Love 2 Da Max ∞ · N &amp; N Infi
+/* REMOVE ANY POSSIBLE GAP */
+.header-bar img {
+  display: block;
+}
+</style>
