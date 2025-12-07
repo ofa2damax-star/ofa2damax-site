@@ -1,719 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><a href="#top" class="brand">
-<img src="ofa.png" alt="Ofa2daMax logo" style="height:40px;width:auto;border-radius:999px;margin-right:8px;">
-  <div class="nn-logo">
-    ∞    <aside class="box">
-      <h3 style="margin-bottom:6px;font-size:15px;">In honor of Neko</h3>
-   <img src="65D4C14F-6DC7-4C0B-8C73-800AAAD84CF4.jpeg"
-     alt="Neko"
-     style="width:100%;border-radius:12px;margin-bottom:8px;object-fit:cover;max-height:260px;">
-      <p style="font-size:12px;color:var(--muted);">
-        This nonprofit carries Neko’s name and spirit forward. Every act of support, every kid who feels
-        seen, and every bit of love shared in his honor is part of his story living on.
-      </p>
-    </aside>
-    <span class="small">N N</span>
-  </div>
-  <div class="brand-text">
-    <div class="brand-title">Ofa2DaMax – Love 2 Da Max</div>
-    <div class="brand-tagline">In honor of Neko · Unconditional love for every child</div>
-  </div>
-</a>
-  <meta charset="UTF-8" />
-  <title>Ofa2daMax – Love 2 Da Max</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Ofa2daMax is a nonprofit created in memory of Neko, lifting kids and families with essentials, dignity, and unconditional love.">
+<head>
+  <meta charset="UTF-8">
+  <title>Ofa2DaMax • Love 2 Da Max</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
     :root {
-      --bg: #020617;
-      --bg-card: #020617;
-      --accent: #f97316;
-      --accent-soft: rgba(249, 115, 22, 0.15);
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --border: rgba(148, 163, 184, 0.5);
-      --radius: 16px;
-}
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1f2937 0, #020617 45%, #000 100%);
-      color: var(--text);
+      --bg: #050505;
+      --fg: #f5f5f5;
+      --muted: #a0a0a0;
+      --accent: #ffffff;
+      --border: #333333;
     }
 
-    a { color: inherit; text-decoration: none; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    .shell {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 16px;
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.5;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
     }
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(14px);
-      background: linear-gradient(to bottom, rgba(15,23,42,0.96), rgba(15,23,42,0.85), transparent);
-      border-bottom: 1px solid rgba(148,163,184,0.3);
-    }
-
-    .header-inner {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      padding: 10px 0;
+      gap: 16px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
-    .nn-logo {
-      width: 40px;
+    .brand-logo {
       height: 40px;
+      width: 40px;
       border-radius: 999px;
-      background: radial-gradient(circle at 30% 30%, #facc15, #f97316 45%, #4c1d95 80%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      box-shadow: 0 0 18px rgba(248,250,252,0.5);
-      color: #fefce8;
-      font-weight: 700;
-      font-size: 20px;
+      object-fit: cover;
     }
 
-    .nn-logo span.small {
-      position: absolute;
-      bottom: 3px;
-      font-size: 9px;
-      letter-spacing: 0.14em;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-title {
-      font-size: 15px;
-      font-weight: 600;
+    .brand-text h1 {
+      font-size: 18px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    .brand-tagline {
+    .brand-text p {
       font-size: 12px;
       color: var(--muted);
     }
 
-    nav {
-      display: flex;
-      gap: 16px;
+    .nn-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 18px;
+      margin-left: 8px;
+    }
+
+    .nn-logo .small {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+    }
+
+    .top-contact {
+      text-align: right;
       font-size: 13px;
     }
 
-    nav a {
+    .top-contact div {
+      margin-bottom: 2px;
+    }
+
+    .top-contact span.label {
       color: var(--muted);
-      padding-bottom: 2px;
-      border-bottom: 1px solid transparent;
-    }
-
-    nav a:hover {
-      color: #f9fafb;
-      border-color: rgba(249,115,22,0.8);
-    }
-
-    .nav-phone {
-      font-size: 13px;
-      color: #fed7aa;
-      white-space: nowrap;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     main {
-      padding: 28px 0 40px;
-    }
-
-    h1, h2, h3 { margin: 0 0 8px; }
-
-    p {
-      margin: 0 0 10px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    section {
-      margin-bottom: 32px;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
     }
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-      gap: 28px;
-      align-items: center;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+      gap: 24px;
+      align-items: flex-start;
+      margin-bottom: 40px;
     }
 
-    .hero-kicker {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #fb923c;
+    @media (max-width: 720px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .top-contact {
+        text-align: left;
+      }
+    }
+
+    .hero-title {
+      font-size: 30px;
       margin-bottom: 8px;
     }
 
-    .hero h1 {
-      font-size: 28px;
-      line-height: 1.2;
-    }
-
-    .hero h1 span {
-      background: linear-gradient(to right, #f97316, #fb7185, #a855f7);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 10px 0;
-    }
-
-    .btn {
-      border-radius: 999px;
-      padding: 7px 14px;
-      font-size: 13px;
-      border: 1px solid transparent;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .btn-primary {
-      background: radial-gradient(circle at 20% 0, #fed7aa 0, #f97316 40%, #c2410c 100%);
-      color: #0b1120;
-      box-shadow: 0 10px 22px rgba(15,23,42,0.9);
-      border-color: rgba(248,250,252,0.12);
-    }
-
-    .btn-outline {
-      background: rgba(15,23,42,0.95);
-      border-color: rgba(148,163,184,0.6);
-      color: var(--text);
-    }
-
-    .hero-meta {
-      font-size: 12px;
-      color: var(--muted);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .hero-card {
-      background: var(--bg-card);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      padding: 14px 13px 16px;
-      font-size: 13px;
-      box-shadow: 0 18px 36px rgba(15,23,42,0.85);
-    }
-
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 3px 9px;
-      border-radius: 999px;
-      border: 1px solid rgba(248,250,252,0.18);
-      background: rgba(15,23,42,0.95);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #fb923c;
-      margin-bottom: 6px;
-    }
-
-    .section-title {
-      font-size: 20px;
-    }
-
-    .section-intro {
-      font-size: 14px;
+    .hero-subtitle {
+      font-size: 15px;
       color: var(--muted);
       margin-bottom: 16px;
-      max-width: 640px;
     }
 
-    .cards {
+    .hero-body {
+      font-size: 14px;
+      color: var(--fg);
+    }
+
+    .hero-body p + p {
+      margin-top: 10px;
+    }
+
+    .neko-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      background: #0b0b0b;
+    }
+
+    .neko-card h3 {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .neko-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      object-fit: cover;
+      max-height: 260px;
+    }
+
+    .neko-card p {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    section {
+      margin-bottom: 32px;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+
+    section h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    section p {
+      font-size: 14px;
+      color: var(--fg);
+      margin-bottom: 8px;
+    }
+
+    .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
     }
 
     .card {
-      background: var(--bg-card);
-      border-radius: var(--radius);
       border: 1px solid var(--border);
-      padding: 14px 13px 14px;
+      border-radius: 14px;
+      padding: 14px;
       font-size: 13px;
-      box-shadow: 0 14px 32px rgba(15,23,42,0.8);
-    }
-
-    .card-tag {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--muted);
-      margin-bottom: 4px;
     }
 
     .card h3 {
-      font-size: 15px;
+      font-size: 14px;
       margin-bottom: 6px;
     }
 
     .card ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      font-size: 12px;
+      padding-left: 18px;
+      margin-top: 4px;
     }
 
-    .card ul li {
-      display: flex;
-      gap: 6px;
+    .card li {
       margin-bottom: 4px;
     }
 
-    .card ul li span.b {
-      color: #fb923c;
-      margin-top: 1px;
-    }
-
-    .split {
+    .contact-block {
       display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 20px;
-      align-items: start;
-    }
-
-    .box {
-      background: var(--bg-card);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      padding: 14px 13px 15px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
       font-size: 13px;
-      box-shadow: 0 16px 34px rgba(15,23,42,0.85);
+      margin-top: 8px;
     }
 
-    .legacy-quote {
-      border-left: 2px solid #fb923c;
-      padding-left: 8px;
-      margin: 8px 0 10px;
-      font-size: 12px;
-      color: #e5e7eb;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 18px;
-    }
-
-    label {
-      font-size: 12px;
-      color: var(--muted);
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    input, textarea {
-      width: 100%;
-      border-radius: 9px;
-      border: 1px solid rgba(148,163,184,0.7);
-      background: rgba(15,23,42,0.96);
-      color: var(--text);
-      padding: 6px 8px;
-      font-size: 13px;
-    }
-
-    textarea {
-      min-height: 100px;
-      resize: vertical;
+    .contact-block strong {
+      font-weight: 600;
     }
 
     footer {
-      border-top: 1px solid rgba(148,163,184,0.5);
-      background: radial-gradient(circle at top, rgba(15,23,42,0.96) 0, #020617 60%, #000 100%);
-      padding: 14px 0 18px;
+      border-top: 1px solid var(--border);
+      padding: 18px 16px 28px;
       font-size: 11px;
       color: var(--muted);
+      text-align: center;
     }
 
-    .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 10px;
+    .inline-pill {
+      display: inline-flex;
       align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      margin-top: 6px;
     }
 
-    .footer-contact {
-      display: flex;
-      flex-wrap: wrap;
+    .sponsor-note {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 10px;
-      align-items: center;
-      font-size: 11px;
+      margin-top: 10px;
     }
 
-    .footer-contact a {
-      color: #fb923c;
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .hero-card {
-        order: -1;
-      }
-      .cards {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .split {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .contact-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      nav { display: none; }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      max-height: 180px;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <div class="shell">
-      <div class="header-inner">
-        <a href="#top" class="brand">
-          <div class="nn-logo">
-            ∞
-            <span class="small">N N</span>
-          </div>
-          <div class="brand-text">
-            <div class="brand-title">Ofa2daMax – Love 2 Da Max</div>
-            <div class="brand-tagline">In honor of Neko · Unconditional love for every child</div>
-          </div>
-        </a>
-        <nav>
-          <a href="#mission">Mission</a>
-          <a href="#programs">Programs</a>
-          <a href="#legacy">Neko’s Legacy</a>
-          <a href="#support">Support</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <div class="nav-phone">
-          📞 <a href="tel:+18015298857">801-529-8857</a>
-        </div>
+    <div class="brand">
+      <!-- Replace ofa.png with your logo file -->
+      <img src="ofa.png" alt="Ofa2DaMax logo" class="brand-logo">
+
+      <div class="brand-text">
+        <h1>
+          Ofa2DaMax
+          <span class="nn-logo">
+            ∞ <span class="small">N N</span>
+          </span>
+        </h1>
+        <p>In honor of Neko · Love 2 Da Max</p>
+      </div>
+    </div>
+
+    <div class="top-contact">
+      <div><span class="label">Toll-free</span> <br> <a href="tel:1-844-568-2629">1-844-568-2629</a></div>
+      <div><span class="label">Local</span> <br> <a href="tel:385-202-1110">385-202-1110</a></div>
+      <div><span class="label">Cell (Jason)</span> <br> <a href="tel:801-529-8857">801-529-8857</a></div>
+      <div><span class="label">Email</span> <br>
+        <a href="mailto:ofa2damax@gmail.com">ofa2damax@gmail.com</a>
       </div>
     </div>
   </header>
 
-  <main id="top">
-    <div class="shell">
-      <!-- HERO / MISSION -->
-      <section class="hero" id="mission">
-        <div>
-          <div class="hero-kicker">Nonprofit · Utah · Kids & Families</div>
-          <h1>
-            Lifting kids and families with
-            <span>love 2 da max.</span>
-          </h1>
+  <main>
+    <section class="hero">
+      <div>
+        <h1 class="hero-title">Lifting kids & families with love 2 da max.</h1>
+        <p class="hero-subtitle">Nonprofit · Utah · Kids & Families · In honor of Neko</p>
+
+        <div class="hero-body">
           <p>
-            Ofa2daMax is a nonprofit created in memory of Neko, dedicated to providing essentials, dignity,
-            and opportunity for children and families facing hardship. Every child deserves to feel seen,
-            supported, and loved without conditions.
+            Ofa2DaMax is a youth-focused nonprofit created in memory of Neko, dedicated to making sure
+            no child gets held back by what they don’t have. Clothing, gear, school needs, basics—
+            whatever it is, the mission is simple: nobody gets left behind on love.
           </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Contact us →</a>
-            <a href="tel:+18015298857" class="btn btn-outline">📞 Call Jason · 801-529-8857</a>
-          </div>
-          <div class="hero-meta">
-            <span><strong>Founder &amp; President:</strong> Jason Jardine</span>
-            <span><strong>In honor of:</strong> Neko · “Love without limits”</span>
-          </div>
-        </div>
-        <aside class="hero-card">
-          <div class="hero-pill">∞ N &amp; N · Legacy of love</div>
-          <h2 style="margin:4px 0 6px;font-size:15px;">Our mission</h2>
-          <p style="margin:0 0 8px;">
-            Our mission is to lift children and families with unwavering support, empowerment, and
-            unconditional love. We provide essentials, opportunities, and hope so every child feels seen,
-            valued, and capable of reaching their full potential.
+          <p>
+            Every act of support, every kid who feels seen, and every bit of love shared in his honor
+            is part of Neko’s story living on.
           </p>
-          <p style="margin:0;font-size:12px;color:var(--muted);">
-            We do this through direct support, school and community partnerships, and sustainable projects
-            that turn apparel and gear into funding for kids.
-          </p>
-        </aside>
-      </section>
 
-      <!-- HOW WE WORK -->
-      <section id="programs">
-        <h2 class="section-title">How we work toward our mission</h2>
-        <p class="section-intro">
-          We turn love into action through direct support, community partnership, and sustainable ways to fund
-          the work. Every step is grounded in dignity, respect, and unconditional care.
-        </p>
-        <div class="cards">
-          <article class="card">
-            <div class="card-tag">01 · Direct support</div>
-            <h3>Essentials for kids &amp; families</h3>
-            <p>
-              We provide clothing, school supplies, hygiene items, and emergency essentials to children and
-              families in need—quickly, respectfully, and without judgment.
-            </p>
-            <ul>
-              <li><span class="b">•</span><span>Fast response to urgent needs.</span></li>
-              <li><span class="b">•</span><span>Referrals from schools and community partners.</span></li>
-              <li><span class="b">•</span><span>Dignity-first: no shame, no labels.</span></li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="card-tag">02 · Community</div>
-            <h3>School &amp; youth partnerships</h3>
-            <p>
-              We work with schools, counselors, coaches, and youth programs to reach children who are most
-              likely to be left out, bullied, or overlooked because of hardship.
-            </p>
-            <ul>
-              <li><span class="b">•</span><span>Collaboration with schools and youth organizations.</span></li>
-              <li><span class="b">•</span><span>Support that keeps kids connected to school, sports, and community.</span></li>
-              <li><span class="b">•</span><span>Focus on kids who feel unseen or “last in line.”</span></li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="card-tag">03 · Sustainability</div>
-            <h3>Gear with purpose</h3>
-            <p>
-              We plan to operate embroidery and apparel projects—school emblems, team gear, and community
-              merch—with proceeds supporting our nonprofit work.
-            </p>
-            <ul>
-              <li><span class="b">•</span><span>Custom school &amp; team apparel.</span></li>
-              <li><span class="b">•</span><span>Revenue that funds essentials for kids.</span></li>
-              <li><span class="b">•</span><span>Community pride that gives back.</span></li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <!-- NEKO’S LEGACY -->
-      <section id="legacy">
-        <div class="split">
-          <div>
-            <h2 class="section-title">Neko’s legacy: the heart of Ofa2daMax</h2>
-            <p class="section-intro">
-              Ofa2daMax was created in memory of Neko, whose kindness, loyalty, and unconditional love continue
-              to guide every decision we make. He had a gift for making people feel seen, included, and valued—
-              especially those who felt like they didn’t belong.
-            </p>
-            <p>
-              This nonprofit is one way his light keeps moving forward. Every child we help, every act of
-              support, and every moment of restored dignity is part of his ongoing story.
-            </p>
-            <p>∞ Founded to honor Neko’s spirit of love without conditions.</p>
-            <p>∞ Focused on kids who feel unseen, overlooked, or left behind.</p>
-            <p>∞ The N&amp;N infinity idea represents a bond that never ends and love that keeps giving.</p>
-          </div>
-          <aside class="box">
-            <h3 style="margin-bottom:6px;font-size:15px;">Legacy of love · N &amp; N</h3>
-            <p>
-              “Ofa2daMax” means love to the max. It’s more than a name—it’s a promise that the love that started
-              this will never stop at “good enough.” It reaches for the kid who feels last in line and reminds
-              them they matter.
-            </p>
-            <p class="legacy-quote">
-              “Through this work, Neko’s heart keeps showing up for kids who need it most. The mission is simple:
-              nobody gets left behind on love.”
-            </p>
-            <p style="font-size:12px;color:var(--muted);">
-              Guiding values: <strong>Unconditional love · Dignity · Hope</strong>
-            </p>
-          </aside>
-        </div>
-      </section>
-
-      <!-- SUPPORT -->
-      <section id="support">
-        <h2 class="section-title">How people can support Ofa2daMax</h2>
-        <p class="section-intro">
-          We’re building this work step by step. Support can look like partnership, in-kind help, or future
-          sponsorships as we grow the nonprofit and our social enterprise projects.
-        </p>
-        <div class="cards">
-          <article class="card">
-            <div class="card-tag">Families &amp; youth</div>
-            <h3>If you need support</h3>
-            <p>If your family or a child you know needs essentials or encouragement, reach out.</p>
-            <ul>
-              <li><span class="b">•</span><span>Contact Jason directly by phone or email.</span></li>
-              <li><span class="b">•</span><span>We work with schools, counselors, and local orgs.</span></li>
-              <li><span class="b">•</span><span>We respond with dignity and respect, no judgment.</span></li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="card-tag">Schools &amp; programs</div>
-            <h3>Partners in the community</h3>
-            <p>
-              Schools, coaches, and youth programs can partner with Ofa2daMax to reach kids who are falling
-              through the cracks.
-            </p>
-            <ul>
-              <li><span class="b">•</span><span>Referrals for students needing essentials.</span></li>
-              <li><span class="b">•</span><span>Collaboration on events and local projects.</span></li>
-              <li><span class="b">•</span><span>Future access to purpose-driven gear for teams.</span></li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="card-tag">Supporters</div>
-            <h3>Friends, donors &amp; sponsors</h3>
-            <p>
-              As the nonprofit grows, financial and in-kind support help us reach more kids with essentials,
-              stability, and hope.
-            </p>
-            <ul>
-              <li><span class="b">•</span><span>In-kind donations: clothing, supplies, services.</span></li>
-              <li><span class="b">•</span><span>Future sponsorship of programs and events.</span></li>
-              <li><span class="b">•</span><span>Sharing our mission so kids know they’re not alone.</span></li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact">
-        <h2 class="section-title">Get in touch with Ofa2daMax</h2>
-        <p class="section-intro">
-          Whether you’re a family in need, a school partner, or a potential supporter, we’d love to hear from you.
-          Reach out to Jason directly or use the information below.
-        </p>
-        <div class="contact-grid">
-          <div class="box">
-            <p><strong>Direct phone</strong><br>📞 <a href="tel:+18015298857">801-529-8857</a></p>
-            <p><strong>Email (general contact)</strong><br><a href="mailto:info@ofa2damax.com">info@ofa2damax.com</a></p>
-            <p><strong>Email (Jason · Founder &amp; President)</strong><br><a href="mailto:jason@ofa2damax.com">jason@ofa2damax.com</a></p>
-            <p><strong>Location</strong><br>Utah, United States · Serving children &amp; families in our community and beyond.</p>
-          </div>
-          <div class="box">
-            <p style="margin-bottom:6px;"><strong>For now, contact is simple:</strong></p>
-            <p style="margin-bottom:6px;">Call, text, or email Jason directly to:</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:13px;color:var(--muted);">
-              <li>∞ Ask for help for a child or family</li>
-              <li>∞ Explore a school or community partnership</li>
-              <li>∞ Talk about supporting or sponsoring the work</li>
-            </ul>
-            <p style="margin-top:10px;font-size:12px;color:var(--muted);">
-              As the nonprofit grows, this page will expand with more ways to connect, give, and get involved.
-            </p>
+          <div class="inline-pill" style="margin-top: 14px;">
+            <span>∞ N &amp; N · Legacy of love</span>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+
+      <aside class="neko-card">
+        <h3>In honor of Neko</h3>
+
+        <img
+          src="65D4C14F-6DC7-4C0B-8C73-800AAAD84CF4.jpeg"
+          alt="Neko"
+          class="neko-image"
+        >
+
+        <p>
+          This nonprofit carries Neko’s name and spirit forward. Every act of support, every kid who
+          feels seen, and every bit of love shared in his honor is part of his story living on.
+        </p>
+
+        <div class="gallery">
+          <!-- extra photos here if you want -->
+          <!-- <img src="pic2.jpg" alt="Ofa2DaMax in the community">
+          <img src="pic3.jpg" alt="Support for kids"> -->
+        </div>
+      </aside>
+    </section>
+
+    <section>
+      <h2>Our mission</h2>
+      <p>
+        Our mission is to lift children and families with unwavering support, empowerment, and
+        unconditional love. We provide essentials, opportunities, and hope so every child feels seen,
+        valued, and capable of reaching their full potential.
+      </p>
+      <p>
+        We do this through direct support, school and community partnerships, and sustainable projects
+        that turn apparel and gear into funding for kids.
+      </p>
+    </section>
+
+    <section>
+      <h2>How we work</h2>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>01 · Direct support</h3>
+          <p>Essentials for kids & families.</p>
+          <ul>
+            <li>Clothing, shoes, school items, hygiene, and basics.</li>
+            <li>Fast response when families are in crisis.</li>
+            <li>Dignity-first: no shame, no labels.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>02 · Community</h3>
+          <p>School & youth partnerships.</p>
+          <ul>
+            <li>Referrals from schools, counselors, and coaches.</li>
+            <li>Keeping kids connected to school, sports, and peers.</li>
+            <li>Focus on kids who feel unseen or last in line.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>03 · Sustainability</h3>
+          <p>Gear with purpose.</p>
+          <ul>
+            <li>Embroidery & apparel projects with school emblems.</li>
+            <li>Proceeds help fund essentials for kids.</li>
+            <li>Community pride that gives back.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact & support</h2>
+      <p>
+        If you need help for a child or family, want to partner as a school or program, or are interested
+        in donating or sponsoring, reach out directly.
+      </p>
+
+      <div class="contact-block">
+        <div>
+          <strong>Phone</strong><br>
+          Toll-free: <a href="tel:1-844-568-2629">1-844-568-2629</a><br>
+          Local: <a href="tel:385-202-1110">385-202-1110</a><br>
+          Cell (Jason): <a href="tel:801-529-8857">801-529-8857</a>
+        </div>
+
+        <div>
+          <strong>Email</strong><br>
+          General: <a href="mailto:info@ofa2damax.com">info@ofa2damax.com</a><br>
+          Gmail: <a href="mailto:ofa2damax@gmail.com">ofa2damax@gmail.com</a><br>
+          Jason: <a href="mailto:jason@ofa2damax.com">jason@ofa2damax.com</a>
+        </div>
+
+        <div>
+          <strong>Location</strong><br>
+          Utah, United States<br>
+          Serving kids & families in our community and beyond.
+        </div>
+      </div>
+
+      <p class="sponsor-note">
+        For sponsor sheets, banks, or foundations, this page can be printed as a one-pager overview.
+      </p>
+    </section>
   </main>
 
   <footer>
-    <div class="shell">
-      <div class="footer-inner">
-        <span>© 2025 Ofa2daMax · In memory of Neko · Love 2 Da Max ∞</span>
-        <div class="footer-contact">
-          <span>📞 <a href="tel:+18015298857">801-529-8857</a></span>
-          <span>✉️ <a href="mailto:info@ofa2damax.com">info@ofa2damax.com</a></span>
-          <span>✉️ <a href="mailto:jason@ofa2damax.com">jason@ofa2damax.com</a></span>
-        </div>
-      </div>
-    </div>
+    © 2025 Ofa2DaMax · In memory of Neko · Love 2 Da Max ∞ · N &amp; N Infinity ·
+    Email: <a href="mailto:ofa2damax@gmail.com">ofa2damax@gmail.com</a>
   </footer>
 </body>
 </html>
-      <!-- DONATIONS & SPONSORS -->
-      <section id="donate">
-        <h2 class="section-title">Donations & sponsors</h2>
-        <p class="section-intro">
-          Ofa2daMax is built on love first, money second. As we grow the nonprofit and complete our
-          501(c)(3) journey, support from friends, family, and future sponsors helps us reach more kids
-          with essentials, stability, and hope.
-        </p>
-
-        <div class="cards">
-          <article class="card">
-            <div class="card-tag">Donate</div>
-            <h3>How to support right now</h3>
-            <p>
-              Until online donations are set up, support is simple and personal. If you’d like to help,
-              reach out to Jason directly and we’ll talk about the best way to give.
-            </p>
-            <ul>
-              <li><span class="b">•</span><span>Cash or in-kind donations (clothes, shoes, supplies).</span></li>
-              <li><span class="b">•</span><span>Gift cards for food, school needs, or basics.</span></li>
-              <li><span class="b">•</span><span>Donations can be directed to kids and families in immediate need.</span></li>
-            </ul>
-            <p style="margin-top:8px;font-size:12px;color:var(--muted);">
-              To give: call or text Jason at <a href="tel:+18015298857">801-529-8857</a> or email
-              <a href="mailto:jason@ofa2damax.com">jason@ofa2damax.com</a>.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-tag">Sponsors</div>
-            <h3>Community & brand partners</h3>
-            <p>
-              We’re open to partnering with schools, small businesses, and larger brands who want to stand
-              with kids who are often overlooked.
-            </p>
-            <ul>
-              <li><span class="b">•</span><span>Support scholarships for gear, fees, or activities.</span></li>
-              <li><span class="b">•</span><span>Co-branded apparel where proceeds go back to kids.</span></li>
-              <li><span class="b">•</span><span>Sponsorship of specific programs or events.</span></li>
-            </ul>
-            <p style="margin-top:8px;font-size:12px;color:var(--muted);">
-              If you represent a school, company, or foundation and want to explore sponsorships, contact
-              Jason at <a href="mailto:info@ofa2damax.com">info@ofa2damax.com</a>.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-tag">Future plans</div>
-            <h3>Online giving & social enterprise</h3>
-            <p>
-              As Ofa2daMax grows, we plan to add secure online donation options and launch apparel and
-              embroidery projects that help fund the mission.
-            </p>
-            <ul>
-              <li><span class="b">•</span><span>Online donations through trusted platforms (coming soon).</span></li>
-              <li><span class="b">•</span><span>Purpose-driven merch that funds essentials for kids.</span></li>
-              <li><span class="b">•</span><span>Transparent updates on how support is used.</span></li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-<section>
-  <h2 class="section-title">Neeks 44 Forever</h2>
-  <img src="65D4C14F-6DC7-4C0B-8C73-800AAAD84CF4.jpeg" 
-       alt="Neeks 44 Forever - Sonic Sign"
-       style="width:100%;border-radius:16px;margin-top:12px;">
-</section>
