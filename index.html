@@ -15,18 +15,19 @@
     line-height: 1.45;
   }
 
-  /* HEADER: 2x3 IMAGES WITH INFINITY IN CENTER */
+  /* HEADER: EXACT 2x3 INCH IMAGES WITH INFINITY IN CENTER */
   .header-bar {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 15px 20px;
+    gap: 25px;
+    padding: 20px 0;
   }
 
   .header-img {
-    width: 160px;
-    height: 240px;
+    width: 2in;     /* EXACT width in inches */
+    height: 3in;    /* EXACT height in inches */
     object-fit: cover;
     border-radius: 10px;
   }
@@ -34,14 +35,13 @@
   .infinity {
     font-size: 70px;
     font-weight: bold;
-    margin: 0 10px;
   }
 
   .container {
     width: 92%;
     max-width: 850px;
     margin: auto;
-    padding-top: 20px;
+    padding-top: 15px;
   }
 
   h1, h2, h3 {
@@ -57,16 +57,16 @@
 
 <body>
 
-<!-- HEADER BAR WITH INFINITY IN THE MIDDLE -->
+<!-- HEADER BAR WITH EXACT 2x3 INCH IMAGES -->
 <div class="header-bar">
 
-  <!-- LEFT: LOGO -->
+  <!-- LEFT: LOGO 2x3 inches -->
   <img src="ofa.png" alt="Ofa2DaMax Logo" class="header-img">
 
-  <!-- CENTER: INFINITY SYMBOL -->
+  <!-- CENTER: INFINITY -->
   <div class="infinity">∞</div>
 
-  <!-- RIGHT: NEKO -->
+  <!-- RIGHT: NEKO 2x3 inches -->
   <img src="65D4C14F-6DC7-4C0B-8C73-800AAAD84CF4.jpeg" alt="Neko" class="header-img">
 
 </div>
@@ -168,7 +168,7 @@
 <h3>Location</h3>
 <p>Utah, United States · Serving kids & families in our community and beyond.</p>
 
-<!-- PHOTO SECTION WITH MESSAGE BETWEEN EACH PHOTO -->
+<!-- PHOTOS WITH MESSAGE BETWEEN EACH -->
 <h2 class="center">Our Work · Our People · Our Story</h2>
 
 <div class="photo-flow" style="width:100%; max-width:850px; margin:auto; text-align:center;">
